@@ -72,3 +72,29 @@ function BMI_cal (weight){
 }
 console.log(BMI_cal(70)(1.7))
 
+let arrr = [1,2,3,4,5,6,7,8,9,10]
+function remove_odd (arrr){
+    let new_arr = []
+    for (let i = 0; i < arrr.length; i ++){
+        if (arrr[i]%2 != 0){
+            let spliced = arrr.splice(i, 1);
+            
+            
+        }
+
+    }
+    new_arr = arrr
+    return new_arr
+}
+
+console.log(remove_odd(arrr))
+
+let texts = "Hello New World"
+
+function splitter (text){
+    let arrays = text.split(" ")
+    return arrays
+}
+
+
+console.log(splitter(texts))
