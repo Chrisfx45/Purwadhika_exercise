@@ -18,7 +18,7 @@ console.log ( Centimeters/ 100000 , "Km")
 
 let money = 100000
 
-console.log(Intl.NumberFormat('de-DE', { style: 'currency', currency: 'IDR' }).format(money))
+console.log("Rp " +money.toLocaleString('en-US', {minimumFractionDigits:2}))
 /*
 below is the exercise sesion3
 */
@@ -99,3 +99,4 @@ for (let i =0 ; i < strings.length; i++){
 }
 
 console.log(new_text)
+
