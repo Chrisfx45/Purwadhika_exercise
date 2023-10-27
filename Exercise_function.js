@@ -4,8 +4,8 @@ function triangle(height) {
 
         let text = "";
          for(var j=1; j<=i; j++){ 
-            text = j.toString()
-            line += "0" + text +"  ";
+            text = j.toLocaleString('en-US', {minimumIntegerDigits: 2});
+            line += text +"  ";
         }
         line+="\n";
   
@@ -22,15 +22,53 @@ function triangle1(height) {
         let text = "";
         for(var j=1; j<=i; j++){ 
             num ++
-            text = num.toLocaleString('en-US', {
-                minimumIntegerDigits: 2})
+            text = num.toLocaleString('en-US', {minimumIntegerDigits: 2})
             line += text +"  ";
         }
         line+="\n";
     }
     return line + "\n";
   }
-  console.log(triangle1(5));
+console.log(triangle1(5));
 
 
-  
+function check(length){
+    let  line = ""
+    for(let i = 1; i <= length; i ++){
+        let num =""
+        if (i%3 == 0){
+
+            line += "Fizz, "
+        }else if (i%5 == 0){
+
+            line += "Buzz, "
+        }else{
+            num = i.toString()
+            line = line + num + ", "
+
+        }
+    }
+    return line
+
+}
+console.log(check(10))
+
+
+function BMI_cal (weight){
+    return function(height){
+        let BMI =weight/(height**2)
+        if(BMI<18.5){
+            return "less weight";
+        }else if(BMI>=18.5 && BMI<25){
+            return "ideal";
+        }else if(BMI>=25 && BMI<30){
+            return "overweight";
+        }else if(BMI>=30 && BMI<40){
+            return "very overweight";
+        }else{
+            return "obese"
+        }
+    }
+}
+console.log(BMI_cal(70)(1.7))
+
