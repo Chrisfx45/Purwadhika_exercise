@@ -47,11 +47,14 @@ function check(length){
             line = line + num + ", "
 
         }
+        if (i%5 == 0 && i%3 ==0){
+            line += "FizzBuzz, "
+        }
     }
     return line
 
 }
-console.log(check(10))
+console.log(check(16))
 
 
 function BMI_cal (weight){
@@ -77,9 +80,7 @@ function remove_odd (arrr){
     let new_arr = []
     for (let i = 0; i < arrr.length; i ++){
         if (arrr[i]%2 != 0){
-            let spliced = arrr.splice(i, 1);
-            
-            
+            let spliced = arrr.splice(i, 1);   
         }
 
     }
