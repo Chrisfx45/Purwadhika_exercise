@@ -1,6 +1,5 @@
-alphabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 function to_num(str){
+    alphabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let array = str.split("")
     let num = 0
     let sum = 0
@@ -14,7 +13,7 @@ function to_num(str){
     }
     return sum
 }
-console.log(to_num("DIMAS"))
+console.log(to_num("FD"))
 
 function singles(arr){
     let flag = true;
@@ -31,6 +30,7 @@ function singles(arr){
             flag = true
         }
     }
+    return -1
 }
 
 console.log (singles([2,2,1]))
