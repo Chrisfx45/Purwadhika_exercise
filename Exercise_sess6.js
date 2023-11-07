@@ -7,15 +7,15 @@ class product{
 class Transaction {
     constructor(){
         this.total = 0;
-        this.productcut =[];
+        this.cart =[];
     }
     add(product, quantity){
-        this.productcut.push({
+        this.cart.push({
             product: product,
             quantity :quantity,
             subtotal : product.price * quantity
         });
-        for (let item of this.productcut){
+        for (let item of this.cart){
             this.total += item.subtotal
         }
     }
@@ -24,7 +24,7 @@ class Transaction {
     }
     finish(){
         return {
-            product: this.productcut,
+            product: this.cart,
             total: this.total
         }
 
